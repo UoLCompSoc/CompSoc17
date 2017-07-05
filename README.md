@@ -1,1 +1,1 @@
-# CompSoc17
+![CompSoc 17](github_logo.png)
