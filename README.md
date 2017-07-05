@@ -1,1 +1,1 @@
-![CompSoc 17](github_logo.png)
+![CompSoc 17](assets/github_logo.png)
