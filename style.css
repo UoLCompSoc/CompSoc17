@@ -1,0 +1,188 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
+
+/* Browser */
+
+:root 
+{
+	--background-color: #fff;
+	--foreground-color: #222;
+	--foreground-subtle-color: rgba(0,0,0,0.5);
+	--accent-color: #1D77F0;
+}
+
+:selection 
+{
+	background: #ffb7b7;
+}
+
+:placeholder
+{
+	color: var(--foreground-subtle-color);
+}
+
+/* Containers */
+
+html
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+}
+
+body
+{
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+nav
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	padding: 0 30 0 30px;
+	height: 110px;
+	display: flex;
+	align-items: center;
+}
+
+#nav_links
+{
+	position: absolute;
+	right: 15px;
+}
+
+#nav_links a
+{
+	color: #666;
+	padding: 0 15 0 15px;
+}
+
+main
+{
+	margin: 0 auto 120px auto;
+	max-width: 1000px;
+	padding: 0 30 0 30px;
+}
+
+footer
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #eee;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer img
+{
+	opacity: .5;
+}
+
+.person
+{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.person_img
+{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	overflow: hidden;
+   	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.person_img:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("/assets/noise.png");
+	opacity: 0.3;
+}
+
+.person_img:after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(#ffffff 10%, rgba(0,0,0,0.2) 100%);
+	opacity: .35;
+}
+
+.person_img img
+{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-style: none;
+}
+
+.person_name
+{
+	font-size: 14px;
+	font-weight: 800;
+	margin-top: 20px;
+}
+
+.person_description
+{
+	font-size: 13px;
+	opacity: .5;
+	margin-top: 10px;
+}
+
+/* Objects */
+
+h1
+{
+	font-size: 40px;
+	font-weight: 800;
+	margin: 0 0 30 0px;
+	padding: 0;
+}
+
+p
+{
+	margin: 0;
+	padding: 0;
+}
+
+a
+{
+	color: black;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+a:hover
+{
+}
+
+a:active
+{
+	opacity: 0.6;
+}
