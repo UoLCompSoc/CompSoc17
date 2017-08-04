@@ -1,6 +1,6 @@
 /* Imports */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:600,800');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,800');
 
 /* Browser */
 
@@ -22,153 +22,39 @@
 	color: var(--foreground-subtle-color);
 }
 
-/* Containers */
-
-html
-{
-	margin: 0;
-	padding: 0;
-	font-family: 'Raleway', sans-serif;
-	font-size: 13px;
-	font-weight: 600;
-	background-color: var(--background-color);
-	color: var(--foreground-color);
-}
-
-body
-{
-	margin: 0;
-	padding: 0;
-	max-width: 100%;
-}
-
-nav
-{
-	position: relative;
-	margin: auto;
-	max-width: 1000px;
-	padding: 0 30 0 30px;
-	height: 110px;
-	display: flex;
-	align-items: center;
-}
-
-#nav_links
-{
-	position: absolute;
-	right: 15px;
-}
-
-#nav_links a
-{
-	color: #666;
-	padding: 0 15 0 15px;
-}
-
-main
-{
-	margin: 0 auto 120px auto;
-	max-width: 1000px;
-	padding: 0 30 0 30px;
-}
-
-footer
-{
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #eee;
-	height: 120px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-footer img
-{
-	opacity: .5;
-}
-
-.person
-{
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.person_img
-{
-	position: relative;
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	overflow: hidden;
-   	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.person_img:before
-{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url("/assets/noise.png");
-	opacity: 0.3;
-}
-
-.person_img:after
-{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: linear-gradient(#ffffff 10%, rgba(0,0,0,0.2) 100%);
-	opacity: .35;
-}
-
-.person_img img
-{
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	object-position: center;
-	border-style: none;
-}
-
-.person_name
-{
-	font-size: 14px;
-	font-weight: 800;
-	margin-top: 20px;
-}
-
-.person_description
-{
-	font-size: 13px;
-	opacity: .5;
-	margin-top: 10px;
-}
-
 /* Objects */
 
 h1
 {
-	font-size: 40px;
-	font-weight: 800;
-	margin: 0 0 30 0px;
+	font-size: 8vmin;
+	line-height: 8vmin;
+	font-weight: 700;
+	padding: 0 0 0 30px;
+	margin: 0;
+	background: linear-gradient(-45deg, #19d7fb 0%, #1e63ee 100%);
+	color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+  	animation: fadein 1s ease-in-out 2.5s forwards;
+}
+
+h3
+{
+	font-size: 15px;
+	font-weight: 700;
 	padding: 0;
+	margin: 0 0 20 30px;
+	opacity: 0;
+	color: rgba(0,0,0,0.5);
+  	animation: fadein 1s ease-in-out 1.5s forwards;
 }
 
 p
 {
 	margin: 0;
 	padding: 0;
+	line-height: 1.8;
 }
 
 a
@@ -180,9 +66,412 @@ a
 
 a:hover
 {
+	opacity: 0.5;
 }
 
 a:active
 {
-	opacity: 0.6;
+	opacity: 0.25;
+}
+
+/* Containers */
+
+html
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+}
+
+body
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+	min-height: 100%;
+}
+
+nav
+{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	max-width: 1100px;
+	padding: 0 30 0 30px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	display: none;
+}
+
+#nav_links
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 15px;
+	line-height: 100px;
+}
+
+#nav_links a
+{
+	padding: 0 15 0 15px;
+}
+
+main
+{
+	max-width: 100%;
+	padding: 0 0 150 0px;
+}
+
+#footer_bg
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 150px;
+	background: linear-gradient(#E6E6E6 0%, #FFF 100%);
+}
+
+footer
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto 0 auto;
+	max-width: 1100px;
+	padding: 0 30 0 30px;
+	height: 150px;
+	display: flex;
+	align-items: center;	
+	justify-content: flex-end;
+	font-size: 20px;
+	color: #666;
+}
+
+footer p
+{
+	position: absolute;
+	left: 30px;
+	font-size: 13px;
+}
+
+footer a
+{
+	margin-left: 30px;
+	color: #666;
+}
+
+#landing_bg
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: url("UofLeicester.jpg");
+	background-position: center;
+	background-size: cover;
+	z-index: -1;
+	opacity: 0;
+	transition: transform 0s ease-in;
+  	animation: fadebg 1s ease-in-out .5s forwards;
+}
+
+@keyframes fadebg 
+{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: .35;
+	}
+}
+
+@keyframes fadein
+{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#landing
+{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+#arrow
+{
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin-left: -16px;
+	bottom: 60px;
+	animation: pulse 4s infinite;
+	z-index: 10;
+}
+
+svg
+{	
+	fill: #000000;
+	transform: scale(1.3, 1.3);
+	opacity: 0;
+  	animation: fadein 1s ease-in-out 3.5s forwards;
+}
+
+@keyframes pulse 
+{
+	0% {
+		opacity: .3;
+		transform: translateY(-10px);
+	}
+	50% {
+		opacity: .6;
+		transform: translateY(5px);
+	}
+	100% {
+		opacity: .3;
+		transform: translateY(-10px);
+	}
+}
+
+section
+{
+	width: 100vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0) 40%, #eee 100%);
+}
+
+.section_inner
+{
+	width: 100%;
+	max-width: 1100px;
+}
+
+.section_header
+{
+	font-size: 40px;
+	line-height: 50px;
+	font-weight: 800;
+	margin: 50 0 50 0px;
+	padding: 0 0 0 30px;
+	background: linear-gradient(-45deg, #19d7fb 0%, #1e63ee 100%);
+	color: transparent;
+	display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.section_carousel
+{
+	position: relative;
+	max-width: 100%;
+}
+
+.section_carousel_blur
+{
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+	filter: saturate(3) blur(30px);
+	opacity: .65;
+}
+
+.section_carousel_main
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	max-width: 100%;
+	display: flex;
+}
+
+.section_description
+{
+	padding: 50 0 50 30px;
+}
+
+.section_description p
+{
+	opacity: .7;
+}
+
+.section_description_header
+{
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 15px;
+	opacity: 1!important;
+	font-size: 17px;
+	word-wrap: break-word;
+}
+
+.card
+{	
+	width: 100%;
+	height: 200px;
+	border-radius: 8px;
+	position: relative;
+	overflow: hidden;
+   	background-size: cover;
+   	background-position: center;
+	transition: all .3s;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+	flex-direction: column;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05), inset 0 0 150px rgba(255,255,255,0.25);
+	cursor: default;
+	margin: 0 10 0 10px;
+}
+
+.card_gradient:before
+{	
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(rgba(255,255,255,0.1) 30%, black 100%);
+	opacity: .6;
+	border-radius: 8px;
+	z-index: 1;
+}
+
+.person_card
+{	
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.card_name
+{
+	font-size: 15px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	color: white;
+	text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+	z-index: 1;
+	user-select: none;
+}
+
+.person_name
+{
+	font-size: 15px;
+	color: white;
+	text-shadow: 0px 2px 20px rgba(0,0,0,1);
+	z-index: 1;
+	user-select: none;
+}
+
+.person_role
+{
+	font-size: 14px;
+	margin: 0 0 20 0px;
+	color: #bbb;
+	text-shadow: 0px 2px 20px rgba(0,0,0,1);
+	z-index: 1;
+	user-select: none;
+}
+
+/* Media */
+
+@media only screen and (max-width: 900px), only screen and (max-device-width: 900px) 
+{
+	#landing
+	{
+		align-items: center;
+		justify-content: center;
+	}
+	.card
+	{
+		width: 33.33%;
+		margin: 0px;
+		border-radius: 0;
+	}
+	.card_gradient:before
+	{
+		border-radius: 0;
+	}
+	.section_carousel_blur
+	{
+		flex-wrap: wrap;
+	}
+	.section_carousel_main
+	{
+		flex-wrap: wrap;
+	}
+	h1
+	{
+		padding: 0;
+		margin: 0;
+	}
+	h3
+	{
+		padding: 0;
+		margin: 0 0 20 0px;
+	}
+}
+
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px) 
+{
+	#landing
+	{
+		align-items: center;
+		justify-content: center;
+	}
+	.card
+	{
+		width: 50%;
+		margin: 0px;
+		border-radius: 0;
+	}
+	.card_gradient:before
+	{
+		border-radius: 0;
+	}
+	.section_carousel_blur
+	{
+		flex-wrap: wrap;
+	}
+	.section_carousel_main
+	{
+		flex-wrap: wrap;
+	}
+	h1
+	{
+		padding: 0;
+		margin: 0;
+	}
+	h3
+	{
+		padding: 0;
+		margin: 0 0 20 0px; 
+	}
 }
