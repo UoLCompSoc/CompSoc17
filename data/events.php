@@ -1,23 +1,17 @@
 <?php
 
-class Event 
+class Event
 {
 	public $name = "";
+	public $description = "";
 	public $image = "";
 }
 
 $multiscience = new Event();
-$multiscience->name = 'Multi-Science Barcrawl';
-$multiscience->image = 'multiscience';
+$multiscience->name = 'Headline';
+$multiscience->description = 'AT THE UNIVERSITY OF LEICESTER';
+$multiscience->image = 'multiscience.jpg';
 
-$bletchleypark = new Event();
-$bletchleypark->name = 'Bletchley Park';
-$bletchleypark->image = 'bletchleypark';
-
-$football = new Event();
-$football->name = 'CompSoc Football';
-$football->image = 'football';
-
-$events = array($multiscience, $bletchleypark, $football);
+$events = array($multiscience, $multiscience, $multiscience);
 
 ?>
