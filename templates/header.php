@@ -5,7 +5,7 @@ $links = array("Blog"=>"blog", "Join"=>"http://www.leicesterunion.com/groups/com
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
 	<title><?php echo $page['title'] ?></title>
 	<link rel="stylesheet" href="style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -25,6 +25,8 @@ $links = array("Blog"=>"blog", "Join"=>"http://www.leicesterunion.com/groups/com
 
 	<meta name="apple-mobile-web-app-title" content="CompSoc">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/touch-icon-iphone-retina.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
 
 	<!-- Social Media -->
 
@@ -38,15 +40,4 @@ $links = array("Blog"=>"blog", "Join"=>"http://www.leicesterunion.com/groups/com
 	
 </head>
 <body>
-<nav>
-	<a href="/"><img src="assets/small_logo.svg" alt="CompSoc Logo" /></a>
-	<div id="nav_links">
-		<?php
-			foreach($links as $x => $x_value) 
-			{
-				echo "<a href='" . $x_value . "'>" . $x . "</a>";
-			}
-		?>
-	</div>
-</nav>
 <main>
