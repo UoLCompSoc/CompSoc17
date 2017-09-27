@@ -1,14 +1,14 @@
-$( document ).ready(function()
+$( document ).ready(function() 
 {
 	var now = new Date();
-	if (now.getHours() >= 20 || now.getHours() < 07)
+	if (now.getHours() >= 19 || now.getHours() < 07)
 	{
 		document.body.classList.add('darkmode');
 	}
 });
 
 function showHome()
-{
+{    
     $("#welcome_section").fadeIn(200);
     $("#events_section").hide();
     $("#people_section").hide();
@@ -41,7 +41,7 @@ function showUs()
 }
 
 function showPartners()
-{
+{    
     $("#welcome_section").hide();
     $("#events_section").hide();
     $("#people_section").hide();
