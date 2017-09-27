@@ -225,8 +225,12 @@
 				}
 			?>
 		</div>
-
-		<p style="margin: 48 0 0 0px;">We wouldn't be here without them.</p>
+    <?php
+      foreach ($partners as $partner)
+      {
+        echo "<h2>$partner->name</h2><p>$partner->description</p>";
+      }
+    ?>
 
 	</div>
 </section>

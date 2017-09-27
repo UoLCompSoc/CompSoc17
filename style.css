@@ -775,7 +775,8 @@ section
 .partner img
 {	
 	max-width: 66%;
-	max-height: 22%;
+	max-height: 32%;
+	user-select: none;
 }
 
 .full_width_image
