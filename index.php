@@ -86,7 +86,7 @@
 		<a onclick="showHome()">Home</a>
 		<a onclick="showEvents()">Events</a>
 		<a onclick="showUs()">Meet Us</a>
-		<a onclick="showSponsors()">Sponsors</a>
+		<a onclick="showPartners()">Partners</a>
 	</div>
 </div>
 
@@ -178,7 +178,7 @@
 
 <section id="people_section" class="section">
 	<div class="section_inner">
-	
+
 		<p class="section_header">Meet your CompSoc</p>
 
 		<div class="grid" id="people">

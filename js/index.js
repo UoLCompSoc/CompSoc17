@@ -1,4 +1,4 @@
-$( document ).ready(function() 
+$( document ).ready(function()
 {
 	var now = new Date();
 	if (now.getHours() >= 20 || now.getHours() < 07)
@@ -8,7 +8,7 @@ $( document ).ready(function()
 });
 
 function showHome()
-{    
+{
     $("#welcome_section").fadeIn(200);
     $("#events_section").hide();
     $("#people_section").hide();
@@ -40,14 +40,14 @@ function showUs()
 	$('#hamburger').removeClass('open');
 }
 
-function showSponsors()
-{    
+function showPartners()
+{
     $("#welcome_section").hide();
     $("#events_section").hide();
     $("#people_section").hide();
     $("#partners_section").fadeIn(200);
     $("#hamburger_menu").hide();
-    document.getElementById("page_title").innerHTML = "Sponsors";
+    document.getElementById("page_title").innerHTML = "Partners";
 	$('#hamburger').removeClass('open');
 }
 
