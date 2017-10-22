@@ -142,13 +142,10 @@
 
 				$page = json_decode($page);
 
-				$noevents = "No upcoming events. Check back later 😊";
-
 				foreach($page->data as $event)
 				{
-					$noevents = "";
 
-				    echo "<a href='https://www.facebook.com/events/" . $event->id . "' class='event' style='background-image: url(http://graph.facebook.com/" . $event->id . "/picture?type=large);'>";
+				    echo "<a href='https://www.facebook.com/events/" . $event->id . "' class='event' style='background-image: url(https://graph.facebook.com/" . $event->id . "/picture?type=large);'>";
 
 				    echo "<p class='card_title'>" . $event->name . "</p>";
 
@@ -160,13 +157,15 @@
 				}
 
 			?>
+
+			<div class='event' style="background-image: url(assets/football.jpg);">
+		    	<p class='card_title'>CompSoc Football</p>
+				<p class='card_subtitle'>Every Wednesday in Victoria Park</p>
+			</div>
+
 		</div>
 
-		<?php
-			echo "<p>" . $noevents . "</p>";
-		?>
-
-		<div style="position: relative;">
+		<div style="position: relative; margin-top: 24px;">
 			<p class="section_header_small">PAST</p>
 			<a href="https://www.facebook.com/218213561565638/events" style="position: absolute; right: 0; top: 0;" class="section_header_small">VIEW ALL</a>
 		</div>
@@ -179,7 +178,7 @@
 
 				foreach($page->data as $event)
 				{
-				    echo "<a href='https://www.facebook.com/events/" . $event->id . "' class='event' style='background-image: url(http://graph.facebook.com/" . $event->id . "/picture?type=large);'>";
+				    echo "<a href='https://www.facebook.com/events/" . $event->id . "' class='event' style='background-image: url(https://graph.facebook.com/" . $event->id . "/picture?type=large);'>";
 
 				    echo "<p class='card_title' style='padding-right: 30px;'>" . $event->name . "</p>";
 
